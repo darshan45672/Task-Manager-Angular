@@ -17,7 +17,10 @@ class CommentFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'task_id' => \App\Models\Task::factory(),
+            'user_id' => \App\Models\User::factory(),
+            'content' => fake()->paragraph(),
+            'status' => fake()->randomElement(['active', 'archived', 'deleted']),
         ];
     }
 }

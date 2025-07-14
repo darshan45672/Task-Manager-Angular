@@ -17,7 +17,14 @@ class TaskFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'user_id' => \App\Models\User::factory(),
+            'title' => fake()->sentence(),
+            'description' => fake()->paragraph(),
+            'status' => fake()->randomElement(['pending', 'in_progress', 'completed']),
+            'due_date' => fake()->dateTimeBetween('now', '+1 month'),
+            'completed_at' => fake()->optional()->dateTime(),
+            'completed' => fake()->boolean(),
+            'priority' => fake()->randomElement(['low', 'medium', 'high']),
         ];
     }
 }

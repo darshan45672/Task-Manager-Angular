@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('task_lists', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('task_id')->constrained()->onDelete('cascade');
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->enum('status', ['active', 'archived'])->default('active');
+            $table->boolean('is_favorite')->default(false);
+            $table->boolean('completed')->default(false);
+            $table->timestamp('due_date')->nullable();
+            $table->timestamp('completed_at')->nullable();
+            $table->enum('priority', ['low', 'medium', 'high'])->default('low');
             $table->timestamps();
         });
     }
