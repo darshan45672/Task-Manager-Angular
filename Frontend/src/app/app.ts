@@ -11,5 +11,5 @@ import { BottomNavBar } from './ui_components/includes/bottom-nav-bar/bottom-nav
   styleUrl: './app.css'
 })
 export class App {
-  protected title = 'Frontend';
+  protected title = 'Taskose';
 }

@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../public/css/apexcharts.css';
+@import '../public/fonts/fonts.css';
+@import '../public/fonts/font-icons.css';
+@import '../public/css/nouislider.min.css';
+@import '../public/css/bootstrap.min.css';
+@import '../public/css/swiper-bundle.min.css';
+@import '../public/css/styles.css';     
